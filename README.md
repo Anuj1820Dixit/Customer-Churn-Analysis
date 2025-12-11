@@ -1,124 +1,194 @@
-## 📊 Customer Churn Strategy & Retention Optimization Project
-End-to-End Analytics | Feature Engineering | Predictive Modeling | Revenue Impact | Tableau Storyboard
-🧭 Executive Summary
+# 📊 Customer Churn Strategy & Retention Optimization  
+**End-to-End Analytics | Feature Engineering | Predictive Modeling | Revenue Impact | Tableau Storyboard**
 
-Telecom churn directly impacts recurring revenue and long-term customer value.
-Using a combination of data enrichment, EDA-driven insights, and machine learning, this project builds a complete churn prevention strategy — the same approach used by companies like AT&T, Airtel, Verizon, and Jio.
+---
 
-🎯 Key Outcomes
-Aspect	Result
-Overall Churn	26.5%
-High-Risk Segment Identified	Month-to-Month + Electronic Check + Tenure < 6 months
-Model Accuracy (AUC)	0.837
-Precision@Top10%	73% (Highly Targetable Group)
-Revenue at Risk (CLV)	₹14.7M
-Revenue Recovered (Targeting only Top 10%)	₹76,007
-Net Gain after Campaign Cost	₹40,807
+## 🧭 Executive Summary
 
-### 🧩 1. Business Problem
+Telecom churn directly impacts recurring revenue and long-term customer value.  
+This project builds a **complete, business-focused churn prevention solution** using:
 
-Churn is expensive because telecom revenue is recurring.
-We define a SMART problem statement:
+- Real + synthetic hybrid dataset  
+- Extensive EDA  
+- Feature engineering (CLV, Engagement Score, Tickets Opened)  
+- Machine Learning (Churn Prediction)  
+- Revenue impact modeling  
+- Tableau dashboard for executive insights  
 
-Reduce churn by 10–15% in the next 90 days among early-tenure, high-risk customers through targeted retention campaigns powered by data and machine learning.
+---
 
-### 🧩 2. Why Churn Happens (Business Lens)
+## 🎯 Key Outcomes
 
-Using enriched data + EDA, churn is strongly linked to:
+| Metric / Result | Value |
+|-----------------|--------|
+| **Overall Churn Rate** | **26.5%** |
+| **High-Risk Segment** | Month-to-month, Electronic Check, Tenure < 6 months |
+| **Model AUC** | **0.837** |
+| **Precision@Top10% (High-Risk Customers)** | **73%** |
+| **Revenue at Risk (CLV)** | **₹14.7M** |
+| **Recovered Revenue (Using Targeted Campaign)** | **₹76,007** |
+| **Net Gain After Costs** | **₹40,807** |
 
-⚠ High-risk predictors:
+---
 
-Contract Type — Month-to-Month
-→ 42.7% churn (unstable customers)
+## 🧩 1. Business Problem
 
-Payment Method — Electronic Check
-→ 45.3% churn (payment failures, lack of trust)
+**SMART Problem Statement:**  
+Reduce telecom customer churn by **10–15% within 90 days** by identifying high-risk users and applying targeted retention strategies.
 
-Tenure < 6 months
-→ 52.9% churn (bad onboarding)
+---
 
-Low Engagement & High Support Tickets
-→ Our synthetic features make this even more realistic
-→ Mirrors actual telecom KPIs: NPS, CES, complaint counts
+## 🧩 2. Why Customers Churn (Business Lens)
 
-### 💡 3. Business Insights (Presented Like Consulting Slides)
-📌 Insight 1 — Month-to-Month contract is the core churn driver
-│ Contract Type         │ Churn Rate │
-│-----------------------│------------│
-│ Month-to-Month        │ 42.7%      │
-│ One Year              │ 11.3%      │
-│ Two Year              │ 2.8%       │
+### **Top Churn Drivers Identified:**
+
+#### 🔹 Contract Type  
+- Month-to-month → 42.7% churn
+- One-year → 11.3%
+- Two-year → 2.8%
 
 
-Why it matters:
-These customers have high flexibility → high churn probability.
-Retention must focus here first.
-
-📌 Insight 2 — Switching payment method lowers churn by ~30%
-
-Electronic Check → 45.3% churn
-Auto-Pay (Bank Transfer) → 16.7% churn
-
-Why it matters:
-A simple operational change can drastically reduce churn.
-
-📌 Insight 3 — First 6 months are the danger zone
-Tenure 0–6 months → 52.9% churn
-Tenure 49+ months → 9.5% churn
+#### 🔹 Payment Method  
+- Electronic Check → 45.3% churn
+- Auto-Pay (Bank Transfer) → 16.7%
 
 
-Why it matters:
-Customer onboarding quality is one of the strongest drivers of loyalty.
+#### 🔹 Tenure  
+- Tenure 0–6 months → 52.9% churn
+- Tenure 49+ months → 9.5%
 
-📌 Insight 4 — High CLV customers are NOT the highest churners
 
-Surprising insight:
-High-revenue customers churn less → Better onboarding = more loyalty
+#### 🔹 Customer Engagement  
+- Low engagement score + high support tickets correlate heavily with churn.
 
-This aligns with real-world telecom patterns.
+---
 
-### 🧩 4. Predictive Modeling (Machine Learning)
-Model Used → Logistic Regression
+## 🧩 3. Business Insights (Consulting Style)
 
-Selected because:
+### Insight 1 — Month-to-Month Customers Drive Churn  
+- They make up the **largest risk group**  
+- Lack long-term commitment  
+- Prime candidates for discount/contract campaigns  
 
-Interpretable
+---
 
-Fast
+### Insight 2 — Payment Method Predicts Loyalty  
+- Electronic check users churn **3× more**  
+- Auto-payment users show significantly higher retention  
+- Improving payment onboarding reduces churn
 
-Business-friendly
-(business users can understand coefficients)
+---
 
-Performance Highlights
-Metric	Score
-AUC	0.837
-Precision	0.643
-Recall	0.531
-F1 Score	0.582
-### 🧭 5. Identifying High-Value Churn Risk Customers
+### Insight 3 — First 6 Months Are Critical  
+- Over **52% churn** happens early  
+- Poor onboarding = customer drop-off  
+- Companies should focus on welcome journeys, support quality, and proactive outreach
 
-We scored all customers and extracted the top 10% high-risk.
+---
 
-Metric	Value
-Top customers flagged	704
-Precision@Top10%	73%
-CLV of these customers	₹506,713
+### Insight 4 — High CLV Customers Churn Less  
+- Indicates satisfaction and good onboarding  
+- Low CLV + high churn flags “unhappy new users”
 
-These are the best targets for retention.
+---
 
-### 💰 6. Retention Strategy ROI (Executive Format)
-Assumptions:
+## 🧩 4. Predictive Modeling
 
-Cost per retention call = ₹50
+Model: **Logistic Regression**  
+Chosen due to interpretability + business friendliness.
 
-Conversion rate = 15%
+### Model Performance
 
-ROI Calculations
-Item	Value
-Campaign Cost	₹35,200
-Recovered Revenue	₹76,007
-Net Gain	₹40,807 ✔
+| Metric | Score |
+|--------|--------|
+| **AUC** | **0.837** |
+| Precision | 0.643 |
+| Recall | 0.531 |
+| F1 Score | 0.582 |
 
-Business Meaning:
-→ Targeting only 10% of customers generates a 116% ROI
-→ Operationally efficient & financially justified
+Good separation between churners and non-churners.
+
+---
+
+## 🧭 5. High-Value Churn Risk Identification
+
+Using predicted churn probabilities:
+
+| Metric | Value |
+|--------|--------|
+| Customers in Top 10% High Risk | **704** |
+| Precision@Top10% | **73%** |
+| CLV of High-Risk Group | **₹506,713** |
+
+These users are the **most cost-effective targets** for retention.
+
+---
+
+## 💰 6. Retention Strategy ROI
+
+### Assumptions:
+- Cost per customer contact = ₹50  
+- Conversion rate = 15%  
+
+### Results:
+| Item | Amount |
+|-------|---------|
+| Campaign Cost | ₹35,200 |
+| Revenue Recovered | ₹76,007 |
+| **Net Gain** | **₹40,807** |
+
+➡ **116% ROI** — highly profitable retention strategy.
+
+---
+
+## 📊 7. Tableau Dashboard
+
+Dashboard contains:
+
+### **Page 1 — Executive Overview**
+- Total customers  
+- Churn rate  
+- Revenue at risk (CLV)  
+- High-risk customer distribution  
+
+### **Page 2 — Churn Drivers**
+- Churn by contract type  
+- Churn by tenure bucket  
+- Churn by payment method  
+- Engagement vs Support Tickets  
+
+### **Page 3 — ML Segmentation**
+- Predicted churn score  
+- High-risk clusters  
+- Revenue impact simulation  
+
+### **Page 4 — Retention Strategy**
+- Recommended actions  
+- Estimated ROI  
+- Top segments to target  
+
+---
+
+## 🏆 What This Project Demonstrates
+
+✔ End-to-end analyst workflow  
+✔ Strong data cleaning + feature engineering  
+✔ Ability to derive business insights  
+✔ ML modelling + evaluation  
+✔ Revenue modeling & strategic impact  
+✔ Executive-level dashboard storytelling  
+✔ A real, business-ready churn reduction plan
+
+
+---
+
+
+## 👨‍💻 Tools Used
+
+- Python (Pandas, NumPy, Scikit-learn)
+- SQL (for business logic)
+- Tableau
+- Excel
+- Matplotlib / Seaborn
+
+---
