@@ -1,4 +1,4 @@
-📊 Customer Churn Strategy & Retention Optimization Project
+## 📊 Customer Churn Strategy & Retention Optimization Project
 End-to-End Analytics | Feature Engineering | Predictive Modeling | Revenue Impact | Tableau Storyboard
 🧭 Executive Summary
 
@@ -14,14 +14,15 @@ Precision@Top10%	73% (Highly Targetable Group)
 Revenue at Risk (CLV)	₹14.7M
 Revenue Recovered (Targeting only Top 10%)	₹76,007
 Net Gain after Campaign Cost	₹40,807
-🧩 1. Business Problem
+
+### 🧩 1. Business Problem
 
 Churn is expensive because telecom revenue is recurring.
 We define a SMART problem statement:
 
 Reduce churn by 10–15% in the next 90 days among early-tenure, high-risk customers through targeted retention campaigns powered by data and machine learning.
 
-🧩 2. Why Churn Happens (Business Lens)
+### 🧩 2. Why Churn Happens (Business Lens)
 
 Using enriched data + EDA, churn is strongly linked to:
 
@@ -40,7 +41,7 @@ Low Engagement & High Support Tickets
 → Our synthetic features make this even more realistic
 → Mirrors actual telecom KPIs: NPS, CES, complaint counts
 
-💡 3. Business Insights (Presented Like Consulting Slides)
+### 💡 3. Business Insights (Presented Like Consulting Slides)
 📌 Insight 1 — Month-to-Month contract is the core churn driver
 │ Contract Type         │ Churn Rate │
 │-----------------------│------------│
@@ -76,7 +77,7 @@ High-revenue customers churn less → Better onboarding = more loyalty
 
 This aligns with real-world telecom patterns.
 
-🧩 4. Predictive Modeling (Machine Learning)
+### 🧩 4. Predictive Modeling (Machine Learning)
 Model Used → Logistic Regression
 
 Selected because:
@@ -94,7 +95,7 @@ AUC	0.837
 Precision	0.643
 Recall	0.531
 F1 Score	0.582
-🧭 5. Identifying High-Value Churn Risk Customers
+### 🧭 5. Identifying High-Value Churn Risk Customers
 
 We scored all customers and extracted the top 10% high-risk.
 
@@ -105,7 +106,7 @@ CLV of these customers	₹506,713
 
 These are the best targets for retention.
 
-💰 6. Retention Strategy ROI (Executive Format)
+### 💰 6. Retention Strategy ROI (Executive Format)
 Assumptions:
 
 Cost per retention call = ₹50
